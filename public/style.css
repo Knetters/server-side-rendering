@@ -20,13 +20,16 @@ main {
 /* typography */
 h1 {
     margin: 0;
-}
-
-h2 {
-    margin: 0;
     font-size: 3rem;
     font-weight: 700;
     font-family: 'Bebas Neue', sans-serif;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 700;
+    font-family: 'DM Sans', sans-serif;
 }
 
 h3 {
@@ -35,6 +38,11 @@ h3 {
 
 p {
     margin: 0;
+}
+
+.header-panel p {
+    position: absolute;
+    bottom: .5rem;
 }
 
 .title-block p {
@@ -49,10 +57,34 @@ p {
 }
 
 .live-box span {
-    background-color: rgb(250, 53, 53);
-    padding: .3rem .5rem .3rem .5rem;
+    background-color: #fa3535;
+    padding: .3rem .5rem .4rem .5rem;
     border-radius: .4rem;
     color: white;
+    font-weight: 500;
+}
+
+.green {
+    background-color: #41bf52;
+}
+
+.red {
+    background-color: #fa3535;
+    color: white;
+}
+
+.blue {
+    background-color: #6179ed;
+}
+
+.yellow {
+    background-color: #f7fa35;
+}
+
+.tagg {
+    padding: .3rem 1rem .4rem 1rem;
+    border-radius: .4rem;
+    font-weight: 500;
 }
 
 /* Grid styling */
@@ -140,33 +172,63 @@ p {
     width: 50%;
 }
 
-.score-items:nth-child(1) {
-    display: flex;
-    align-items: left;
-    justify-content: left;
-}
-
 .score-items:nth-child(2) {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.score-items:nth-child(3) {
-    display: flex;
-    align-items: right;
-    justify-content: right;
-}
-
 .score-flag {
     width: 5rem;
     height: 4rem;
     object-fit: cover;
+    object-position: 0% 0;
     border-radius: .4rem;
 }
-  
-  .points-panel { 
+
+/* Points styling */
+.points-panel { 
     grid-area: points-panel; 
+}
+
+.points-container {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.points-team-1 {
+    width: 40%;
+    float: left;
+}
+
+.points-team-2 {
+    width: 40%;
+    float: right;
+}
+
+table {
+    width: 100%;
+    border: none;
+}
+
+td {
+    padding: .2rem;
+    text-align: center;
+}
+
+.green {
+    background-color: #41bf52;
+}
+
+.red {
+    background-color: #fa3535;
+    color: white;
+}
+
+.score-points {
+    width: 20%;
+    float: left;
+    text-align: center;
 }
   
   .top-team-panel { 
@@ -176,9 +238,12 @@ p {
   .bot-team-panel { 
     grid-area: bot-team-panel; 
 }
-  
-  .header-panel { 
+
+/* header styling */
+.header-panel { 
     grid-area: header-panel; 
+    height: 100%;
+    position: relative;
 }
  
 .panel {

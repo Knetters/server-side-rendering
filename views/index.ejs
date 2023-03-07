@@ -5,14 +5,16 @@
         <section class="panel-grid">
 
             <div class="toolbar-grid">
+
+                <%# Title and score %>
                 <div class="panel score-panel">
                     <div class="title-container">
                         <div class="title-block">
-                            <h1>WU24 Championships</h1>
+                            <h2>WU24 Championships</h2>
                             <p>Day 2, game 5</p>
                         </div>
                         <div class="live-box">
-                            <p><span><i class="fa fa-toggle-right"></i> Live</span></p>
+                            <p><span>Live</span></p>
                         </div>
                     </div>
                     <div class="score-container">
@@ -33,13 +35,67 @@
                         </div>
                     </div>
                 </div>
+
+                <%# Points %>
                 <div class="panel points-panel">
                     <h3>Points</h3>
                     <div class="points-container">
                         <div class="points-team-1">
-                            <p></p>
+                            <table cellspacing="0" cellpadding="0">
+                                <thead>
+                                  <tr>
+                                    <th>Pass</th>
+                                    <th>Turn</th>
+                                    <th>O/D</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                    <%# Point item team 1 %>
+                                    <tr class="score-info-team-1 green">
+                                        <td>3</td>
+                                        <td>0</td>
+                                        <td>O</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
+                        <div class="score-points">
+                            <table cellspacing="0" cellpadding="0">
+                                <thead>
+                                  <tr>
+                                    <th>Score</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
 
+                                    <%# Score %>
+                                    <tr>
+                                        <td>1 - 0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="points-team-2">
+                            <table cellspacing="0" cellpadding="0" class="right">
+                                <thead>
+                                  <tr>
+                                    <th>O/D</th>
+                                    <th>Turn</th>
+                                    <th>Pass</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+
+                                   <%# Point item team 2 %> 
+                                    <tr class="score-info-team-2 red">
+                                        <td>D</td>
+                                        <td>0</td>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
                 <div class="panel top-team-panel">
@@ -49,6 +105,8 @@
                     <h3>Team Australia (AUS)</h3>
                 </div>
                 <div class="header-panel">
+                    <h1>Ulti.TV Commentators Dashboard</h1>
+                    <p><span class="tagg green">Goals</span> <span class="tagg blue">Assists</span> <span class="tagg red">Blocks</span> <span class="tagg yellow">Turnovers</span></p>
                 </div>
             </div>
 
