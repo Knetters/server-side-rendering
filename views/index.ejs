@@ -10,8 +10,8 @@
                 <div class="panel score-panel">
                     <div class="title-container">
                         <div class="title-block">
-                            <h2>WU24 Championships</h2>
-                            <p>Day 2, game 5 (match Id?)</p>
+                            <h2><%= data1.field %></h2>
+                            <p><%= data1.gameStatus %> - Division: <%= data1.division %></p>
                         </div>
                         <div class="live-box">
                             <p><span>Live</span></p>
@@ -21,16 +21,16 @@
                         <div class="score-items">
                             <div class="club-badge">
                                 <img class="score-flag" src="/static/img/Flag_of_the_Netherlands.png" alt="Flag of []">
-                                <p>Netherlands</p>
+                                <p><%= data1.team1Name %></p>
                             </div>
                         </div>
                         <div class="score-items">
-                            <h2 class="score-h2">14 - 8</h2>
+                            <h2 class="score-h2"><%= data2.team1Score %> - <%= data2.team2Score %></h2>
                         </div>
                         <div class="score-items">
                             <div class="club-badge">
                                 <img class="score-flag" src="/static/img/Flag_of_Australia.png" alt="Flag of []">
-                                <p>Australia</p>
+                                <p><%= data1.team2Name %></p>
                             </div>
                         </div>
                     </div>
@@ -50,13 +50,16 @@
                                   </tr>
                                 </thead>
                                 <tbody>
+                                    <% data2.scoredPoints.forEach(point => { %>
+                                        <tr class="score-info-team-1 green">
+                                            <td><%= point.team1OorD %></td>
+                                            <td><%= point.team1Turnovers %></td>
+                                            <td><%= point.team1Passes %></td>
+                                        </tr>
+                                    <% }) %>
                                     
                                     <%# Point item team 1 %>
-                                    <tr class="score-info-team-1 green">
-                                        <td>3</td>
-                                        <td>0</td>
-                                        <td>O</td>
-                                    </tr>
+                                    
                                 </tbody>
                             </table>
                         </div>
@@ -71,7 +74,11 @@
 
                                     <%# Score %>
                                     <tr>
-                                        <td>1 - 0</td>
+                                        <% data2.scoredPoints.forEach(point => { %>
+                                            <tr>
+                                                <td><%= point.team1Score %> - <%= point.team2Score %></td>
+                                            </tr>
+                                        <% }) %>
                                     </tr>
                                 </tbody>
                             </table>
@@ -88,126 +95,42 @@
                                 <tbody>
 
                                    <%# Point item team 2 %> 
-                                    <tr class="score-info-team-2 red">
-                                        <td>D</td>
-                                        <td>0</td>
-                                        <td>-</td>
+                                   <% data2.scoredPoints.forEach(point => { %>
+                                    <tr class="score-info-team-1 green">
+                                        <td><%= point.team2OorD %></td>
+                                        <td><%= point.team2Turnovers %></td>
+                                        <td><%= point.team2Passes %></td>
                                     </tr>
+                                <% }) %>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
                 <div class="panel top-team-panel">
-                    <h3>Netherlands (NLD)</h3>
+                    <h3><%= data1.team1Name %> (<%= data1.team1CountryISO3Code %>)</h3>
                     <div class="team-1-container player-container">
-                        <article class="player-card">
-                            <div class="inner-card">
-                                <h4><span>12</span> Pieter Post</h4>
-                                <p><span class="player-tagg green">1</span> <span class="player-tagg blue">4</span> <span class="player-tagg grey">0</span> <span class="player-tagg grey">0</span></p>
-                            </div>
-                        </article>
-                        <article class="player-card">
-                            <div class="inner-card">
-                                <h4><span>12</span> Pieter Post</h4>
-                                <p><span class="player-tagg green">1</span> <span class="player-tagg grey">0</span> <span class="player-tagg grey">0</span> <span class="player-tagg yellow">1</span></p>
-                            </div>
-                        </article>
-                        <article class="player-card">
-                            <div class="inner-card">
-                                <h4><span>12</span> Pieter Post</h4>
-                                <p><span class="player-tagg grey">0</span> <span class="player-tagg blue">2</span> <span class="player-tagg red">3</span> <span class="player-tagg yellow">2</span></p>
-                            </div>
-                        </article>
-                        <article class="player-card">
-                            <div class="inner-card">
-                                <h4><span>12</span> Pieter Post</h4>
-                                <p><span class="player-tagg green">1</span> <span class="player-tagg blue">4</span> <span class="player-tagg grey">0</span> <span class="player-tagg grey">0</span></p>
-                            </div>
-                        </article>
-                        <article class="player-card">
-                            <div class="inner-card">
-                                <h4><span>12</span> Pieter Post</h4>
-                                <p><span class="player-tagg green">1</span> <span class="player-tagg grey">0</span> <span class="player-tagg grey">0</span> <span class="player-tagg yellow">1</span></p>
-                            </div>
-                        </article>
-                        <article class="player-card">
-                            <div class="inner-card">
-                                <h4><span>12</span> Pieter Post</h4>
-                                <p><span class="player-tagg grey">0</span> <span class="player-tagg blue">2</span> <span class="player-tagg red">3</span> <span class="player-tagg yellow">2</span></p>
-                            </div>
-                        </article>
-                        <article class="player-card">
-                            <div class="inner-card">
-                                <h4><span>12</span> Pieter Post</h4>
-                                <p><span class="player-tagg green">1</span> <span class="player-tagg blue">4</span> <span class="player-tagg grey">0</span> <span class="player-tagg grey">0</span></p>
-                            </div>
-                        </article>
-                        <article class="player-card">
-                            <div class="inner-card">
-                                <h4><span>12</span> Pieter Post</h4>
-                                <p><span class="player-tagg green">1</span> <span class="player-tagg grey">0</span> <span class="player-tagg grey">0</span> <span class="player-tagg yellow">1</span></p>
-                            </div>
-                        </article>
-                        <article class="player-card">
-                            <div class="inner-card">
-                                <h4><span>12</span> Pieter Post</h4>
-                                <p><span class="player-tagg grey">0</span> <span class="player-tagg blue">2</span> <span class="player-tagg red">3</span> <span class="player-tagg yellow">2</span></p>
-                            </div>
-                        </article>
+                        <% data1.team1Players.forEach(player => { %>
+                            <article class="player-card">
+                                <div class="inner-card">
+                                    <h4><span><%= player.jerseyNumber %></span> <%= player.name %></h4>
+                                    <p><span class="player-tagg green">0</span> <span class="player-tagg blue">0</span> <span class="player-tagg red">0</span> <span class="player-tagg yellow">0</span></p>
+                                </div>
+                            </article>
+                        <% }) %>
                     </div>
                 </div>
                 <div class="panel bot-team-panel">
-                    <h3>Australia (AUS)</h3>
+                    <h3><%= data1.team2Name %> (<%= data1.team2CountryISO3Code %>)</h3>
                     <div class="team-2-container player-container">
-                        <article class="player-card">
-                            <div class="inner-card">
-                                <h4><span>12</span> Pieter Post</h4>
-                                <p><span class="player-tagg green">1</span> <span class="player-tagg blue">4</span> <span class="player-tagg grey">0</span> <span class="player-tagg grey">0</span></p>
-                            </div>
-                        </article>
-                        <article class="player-card">
-                            <div class="inner-card">
-                                <h4><span>12</span> Pieter Post</h4>
-                                <p><span class="player-tagg green">1</span> <span class="player-tagg grey">0</span> <span class="player-tagg grey">0</span> <span class="player-tagg yellow">1</span></p>
-                            </div>
-                        </article>
-                        <article class="player-card">
-                            <div class="inner-card">
-                                <h4><span>12</span> Pieter Post</h4>
-                                <p><span class="player-tagg grey">0</span> <span class="player-tagg blue">2</span> <span class="player-tagg red">3</span> <span class="player-tagg yellow">2</span></p>
-                            </div>
-                        </article>
-                        <article class="player-card">
-                            <div class="inner-card">
-                                <h4><span>12</span> Pieter Post</h4>
-                                <p><span class="player-tagg green">1</span> <span class="player-tagg blue">4</span> <span class="player-tagg grey">0</span> <span class="player-tagg grey">0</span></p>
-                            </div>
-                        </article>
-                        <article class="player-card">
-                            <div class="inner-card">
-                                <h4><span>12</span> Pieter Post</h4>
-                                <p><span class="player-tagg green">1</span> <span class="player-tagg grey">0</span> <span class="player-tagg grey">0</span> <span class="player-tagg yellow">1</span></p>
-                            </div>
-                        </article>
-                        <article class="player-card">
-                            <div class="inner-card">
-                                <h4><span>12</span> Pieter Post</h4>
-                                <p><span class="player-tagg grey">0</span> <span class="player-tagg blue">2</span> <span class="player-tagg red">3</span> <span class="player-tagg yellow">2</span></p>
-                            </div>
-                        </article>
-                        <article class="player-card">
-                            <div class="inner-card">
-                                <h4><span>12</span> Pieter Post</h4>
-                                <p><span class="player-tagg green">1</span> <span class="player-tagg blue">4</span> <span class="player-tagg grey">0</span> <span class="player-tagg grey">0</span></p>
-                            </div>
-                        </article>
-                        <article class="player-card">
-                            <div class="inner-card">
-                                <h4><span>12</span> Pieter Post</h4>
-                                <p><span class="player-tagg green">1</span> <span class="player-tagg grey">0</span> <span class="player-tagg grey">0</span> <span class="player-tagg yellow">1</span></p>
-                            </div>
-                        </article>
+                        <% data1.team2Players.forEach(player => { %>
+                            <article class="player-card">
+                                <div class="inner-card">
+                                    <h4><span><%= player.jerseyNumber %></span> <%= player.name %></h4>
+                                    <p><span class="player-tagg green">0</span> <span class="player-tagg blue">0</span> <span class="player-tagg red">0</span> <span class="player-tagg yellow">0</span></p>
+                                </div>
+                            </article>
+                        <% }) %>
                         
                     </div>
                 </div>

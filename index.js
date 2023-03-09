@@ -1,10 +1,14 @@
 // Import the required modules
 import express from "express";
+import fetch from "node-fetch";
 
 // Create a new Express app
 const app = express();
 
-const url = 'https://whois.fdnd.nl/api/v1/squad/'
+const urls = [
+  'https://raw.githubusercontent.com/fdnd-agency/ultitv/main/api/game/943.json',
+  'https://raw.githubusercontent.com/fdnd-agency/ultitv/main/api/game/943/statistics.json'
+];
 
 // Set EJS as the template engine and specify the views directory
 app.set("view engine", "ejs");
@@ -17,13 +21,12 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.static("public"));
 
 // Create a route for the index page
-app.get('/', function (request, response) {
+app.get('/', async function (request, response) {
+  const [data1, data2] = await Promise.all(urls.map(fetchJson));
+  const data = {data1, data2};
+  response.render('index', data);
 
-  fetchJson(url).then((data) => {
-    response.render('index', data)
-
-    console.log(data)
-  })
+  console.log(data);
 });
 
 // Set the port number and start the server
