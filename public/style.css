@@ -278,6 +278,7 @@ td {
     margin: .35%;
     flex: 0 1 calc(20% - .7%); /* <-- adjusting for margin */
     width: calc(20% - .7%);
+    transition: .2s;
 }
 
 .player-card:hover {
