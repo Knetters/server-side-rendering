@@ -6,6 +6,19 @@
 
             <div class="toolbar-grid">
 
+                <%# Header %>
+                <div class="header-panel">
+                    <header>
+                        <div class="main-title-block">
+                            <h1>Ulti.TV Commentators Dashboard</h1>
+                            <p><span class="tagg green">Goals</span> <span class="tagg blue">Assists</span> <span class="tagg red">Blocks</span> <span class="tagg yellow">Turnovers</span></p>
+                        </div>
+                        <div class="logo-block">
+                            <img class="logo" src="/static/img/UltiTV_logo.png" alt="Logo UltiTV">
+                        </div>
+                    </header>
+                </div>
+
                 <%# Title and score %>
                 <div class="panel score-panel">
                     <div class="title-container">
@@ -39,7 +52,9 @@
                 <%# Points %>
                 <div class="panel points-panel">
                     <h3>Points</h3>
-                    <div class="points-container">
+
+                    <%# All of the information will be shown here %>
+                    <div id="information-container" class="points-container">
                         <div class="points-team-1">
                             <table cellspacing="0" cellpadding="0">
                                 <thead>
@@ -50,6 +65,8 @@
                                   </tr>
                                 </thead>
                                 <tbody>
+
+                                    <%# Point item team 1 %>
                                     <% data2.scoredPoints.forEach(point => { %>
                                         <tr class="score-info-team-1 green">
                                             <td><%= point.team1Passes %></td>
@@ -57,8 +74,6 @@
                                             <td><%= point.team1OorD %></td>
                                         </tr>
                                     <% }) %>
-                                    
-                                    <%# Point item team 1 %>
                                     
                                 </tbody>
                             </table>
@@ -94,14 +109,15 @@
                                 </thead>
                                 <tbody>
 
-                                   <%# Point item team 2 %> 
-                                   <% data2.scoredPoints.forEach(point => { %>
-                                    <tr class="score-info-team-1 green">
-                                        <td><%= point.team2OorD %></td>
-                                        <td><%= point.team2Turnovers %></td>
-                                        <td><%= point.team2Passes %></td>
-                                    </tr>
-                                <% }) %>
+                                    <%# Point item team 2 %> 
+                                    <% data2.scoredPoints.forEach(point => { %>
+                                        <tr class="score-info-team-1 green">
+                                            <td><%= point.team2OorD %></td>
+                                            <td><%= point.team2Turnovers %></td>
+                                            <td><%= point.team2Passes %></td>
+                                        </tr>
+                                    <% }) %>
+
                                 </tbody>
                             </table>
                         </div>
@@ -110,8 +126,12 @@
                 <div class="panel top-team-panel">
                     <h3><%= data1.team1Name %> (<%= data1.team1CountryISO3Code %>)</h3>
                     <div class="team-1-container player-container">
+
+                        <%# Loop for the first player list %>
                         <% data1.team1Players.forEach(player => { %>
-                            <article class="player-card">
+
+                            <%# Player card %>
+                            <article id="<%= player.playerId %>" class="player-card">
                                 <div class="inner-card">
                                     <h4><span><%= player.jerseyNumber %></span> <%= player.name %></h4>
                                     <p><span class="player-tagg green">0</span> <span class="player-tagg blue">0</span> <span class="player-tagg red">0</span> <span class="player-tagg yellow">0</span></p>
@@ -123,8 +143,12 @@
                 <div class="panel bot-team-panel">
                     <h3><%= data1.team2Name %> (<%= data1.team2CountryISO3Code %>)</h3>
                     <div class="team-2-container player-container">
+
+                        <%# Loop for the second player list %>
                         <% data1.team2Players.forEach(player => { %>
-                            <article class="player-card">
+
+                            <%# Player card %>
+                            <article id="<%= player.playerId %>" class="player-card">
                                 <div class="inner-card">
                                     <h4><span><%= player.jerseyNumber %></span> <%= player.name %></h4>
                                     <p><span class="player-tagg green">0</span> <span class="player-tagg blue">0</span> <span class="player-tagg red">0</span> <span class="player-tagg yellow">0</span></p>
@@ -132,15 +156,6 @@
                             </article>
                         <% }) %>
                         
-                    </div>
-                </div>
-                <div class="header-panel">
-                    <div class="main-title-block">
-                        <h1>Ulti.TV Commentators Dashboard</h1>
-                        <p><span class="tagg green">Goals</span> <span class="tagg blue">Assists</span> <span class="tagg red">Blocks</span> <span class="tagg yellow">Turnovers</span></p>
-                    </div>
-                    <div class="logo-block">
-                        <img class="logo" src="/static/img/UltiTV_logo.png" alt="Logo UltiTV">
                     </div>
                 </div>
             </div>
