@@ -25,8 +25,6 @@ app.get('/', async function (request, response) {
   const [data1, data2] = await Promise.all(urls.map(fetchJson));
   const data = {data1, data2};
   response.render('index', data);
-
-  console.log(data);
 });
 
 // Set the port number and start the server
