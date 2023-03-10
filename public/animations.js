@@ -1,5 +1,5 @@
 gsap.from(".player-card", {
-    duration: .05,
+    duration: .02,
     scale: 0.0,
     y: 40,
     ease: "power1.inOut",
