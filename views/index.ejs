@@ -83,7 +83,7 @@
                                                 </tr>
                                             <% } %>
                                         <% } else { %>
-                                            <% if (point.team1OorD === "O") { %>
+                                            <% if (point.team1OorD === "D") { %>
                                                 <tr class="score-info-team-1 dark-red">
                                                     <td><%= point.team1Passes %></td>
                                                     <td><%= point.team1Turnovers %></td>
@@ -138,29 +138,29 @@
                                         <% if (point.scored === point.team2Name) { %>
                                             <% if (point.team2OorD === "O") { %>
                                                 <tr class="score-info-team-2 dark-green">
-                                                    <td><%= point.team2Passes %></td>
-                                                    <td><%= point.team2Turnovers %></td>
                                                     <td><%= point.team2OorD %></td>
+                                                    <td><%= point.team2Turnovers %></td>
+                                                    <td><%= point.team2Passes %></td>
                                                 </tr>
                                             <% } else {%>
                                                 <tr class="score-info-team-2 green">
-                                                    <td><%= point.team2Passes %></td>
-                                                    <td><%= point.team2Turnovers %></td>
                                                     <td><%= point.team2OorD %></td>
+                                                    <td><%= point.team2Turnovers %></td>
+                                                    <td><%= point.team2Passes  %></td>
                                                 </tr>
                                             <% } %>
                                         <% } else { %>
-                                            <% if (point.team2OorD === "O") { %>
+                                            <% if (point.team2OorD === "D") { %>
                                                 <tr class="score-info-team-2 dark-red">
-                                                    <td><%= point.team2Passes %></td>
-                                                    <td><%= point.team2Turnovers %></td>
                                                     <td><%= point.team2OorD %></td>
+                                                    <td><%= point.team2Turnovers %></td>
+                                                    <td><%= point.team2Passes  %></td>
                                                 </tr>
                                             <% } else {%>
                                                 <tr class="score-info-team-2 red">
-                                                    <td><%= point.team2Passes %></td>
-                                                    <td><%= point.team2Turnovers %></td>
                                                     <td><%= point.team2OorD %></td>
+                                                    <td><%= point.team2Turnovers %></td>
+                                                    <td><%= point.team2Passes  %></td>
                                                 </tr>
                                             <% } %>
                                         <% } %>
