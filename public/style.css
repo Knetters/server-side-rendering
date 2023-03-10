@@ -260,6 +260,11 @@ td {
     color: white;
 }
 
+.dark-red {
+    background-color: #a72828;
+    color: white;
+}
+
 .score-points {
     width: 20%;
     float: left;
