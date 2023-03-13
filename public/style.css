@@ -360,6 +360,7 @@ td {
  
 .logo {
     width: 10rem;
+    margin-top: -1rem;
     display: block;
     margin-left: auto;
 }
@@ -408,6 +409,10 @@ td {
         object-fit: contain;
         display: block;
         margin: 0 auto;
+    }
+
+    .logo {
+        margin-top: -.5rem;
     }
 }
 
