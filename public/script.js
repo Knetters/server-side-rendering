@@ -18,6 +18,7 @@ playerCards.forEach((card) => {
     }
      
     playerInfoContainer.insertAdjacentHTML("afterend", playerHTML);
+    
     const close_BTN = document.getElementById("close-btn");
     close_BTN.addEventListener("click", () => {
 
