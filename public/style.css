@@ -200,12 +200,6 @@ p {
     font-weight: 500;
     margin-top: .5rem;
 }
-.club-badge img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
 
 .score-items:nth-child(2) {
     display: flex;
@@ -214,11 +208,11 @@ p {
 }
 
 .score-flag {
-    width: 25%;
-    height: 25%;
-    object-fit: cover;
-    object-position: 0% 0;
-    border-radius: .4rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Points styling */
@@ -405,7 +399,15 @@ td {
     }
 
     .score-panel {
-        height: 15vh;
+        height: 20vh;
+    }
+
+    .score-flag {
+        width: 4rem;
+        height: 4rem;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
     }
 }
 
