@@ -214,8 +214,8 @@ p {
 }
 
 .score-flag {
-    width: 5rem;
-    height: 3rem;
+    width: 25%;
+    height: 2rem;
     object-fit: cover;
     object-position: 0% 0;
     border-radius: .4rem;
@@ -405,7 +405,7 @@ td {
     }
 
     .score-panel {
-        height: 25vh;
+        height: 15vh;
     }
 }
 
