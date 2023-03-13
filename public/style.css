@@ -8,6 +8,8 @@ body, html {
     height: 100%;
     font-family: 'DM Sans', sans-serif;
     overflow-y: hidden;
+    background: rgb(255,255,255);
+    background: linear-gradient(41deg, rgba(255,255,255,0) 0%, rgba(82,181,153,0.19931722689075626) 0%, rgba(110,70,203,0.19931722689075626) 100%);
 }
 
 main {
@@ -15,8 +17,6 @@ main {
     width: 100vw;
     margin: 0;
     padding: 0;
-    background: rgb(255,255,255);
-    background: linear-gradient(41deg, rgba(255,255,255,0) 0%, rgba(82,181,153,0.19931722689075626) 0%, rgba(110,70,203,0.19931722689075626) 100%);
 }
 
 /* typography */
@@ -377,6 +377,12 @@ td {
     background-color: #ffffff34;
 }
 
+.mobile-view {
+    display: none;
+    padding: 1rem;
+    padding-top: 20vh;
+}
+
 /* Styling tablet vertial (in progress) */
 @media only screen and (max-width: 1000px) {
     body,html {
@@ -397,25 +403,22 @@ td {
             "bot-team-panel"
             "points-panel";
     }
+
+    .score-panel {
+        height: 25vh;
+    }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
     body,html {
         overflow-y: scroll;
     }
 
     .toolbar-grid {
-        height: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
-        gap: 1em;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "header-panel"
-            "score-panel"
-            "top-team-panel"
-            "bot-team-panel"
-            "points-panel";
+        display: none;     
+    }
+
+    .mobile-view {
+        display: block;
     }
 }
