@@ -18,7 +18,7 @@ Ik heb me bezig gehouden met de volgende user stories:
 
 > As a commentator I want to be able to see information about a player, so I can enrich my commentary during the live stream.
 
-![smartmockups_lf9k8gkc](https://user-images.githubusercontent.com/60781257/225287677-b9449dad-eed4-477d-b31e-0f843d89b172.png)
+![smartmockups_lf9kd28p](https://user-images.githubusercontent.com/60781257/225288087-48976ac9-f1e0-4426-862e-7f0d0f9bec39.png)
 
 [Live voorbeeld](https://weak-puce-bonobo-shoe.cyclic.app)
 
