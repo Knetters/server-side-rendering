@@ -18,13 +18,15 @@ Ik heb me bezig gehouden met de volgende user stories:
 
 > As a commentator I want to be able to see information about a player, so I can enrich my commentary during the live stream.
 
+<img width="1439" alt="Screenshot 2023-03-15 at 11 26 49" src="https://user-images.githubusercontent.com/60781257/225285844-daef386b-f235-424b-9229-4786dfe68a69.png">
+
 [Live voorbeeld](https://weak-puce-bonobo-shoe.cyclic.app)
 
 ## Kenmerken
 Dit is een node.js webapplicatie die gebruik maakt van drie API's Er worden spelers opgehaald, informatie van een wedstreid en informatie over de spelers. Alles wordt met een grid in een one-page gezet zodat de commentators niet al te veel hoven te navigeren over de website.
 
 ## Installatie
-> Download of clone dit project. In de root: `npm install` om alle packages te installeren en `npm start` om de website te starten.
+Download of clone dit project. In de root: `npm install` om alle packages te installeren en `npm start` om de website te starten.
 
 ## Gebruik
 Je kan op de kaartjes van spelers klikken voor meer informatie. Wanneer je dat doet verdwijnt de puntentelling van de wedstreid tot dat je op het kruisje klikt.
