@@ -32,8 +32,8 @@ Download of clone dit project. In de root: `npm install` om alle packages te ins
 Je kan op de kaartjes van spelers klikken voor meer informatie. Wanneer je dat doet verdwijnt de puntentelling van de wedstreid tot dat je op het kruisje klikt.
 
 ## Bronnen
-[Ulti.TV](https://ulti.tv)
-[Miro](https://miro.com/app/board/uXjVPhWkx8o=/)
+* [Ulti.TV](https://ulti.tv)
+* [Miro](https://miro.com/app/board/uXjVPhWkx8o=/)
 
 ## Licentie
 
