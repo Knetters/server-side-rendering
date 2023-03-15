@@ -7,7 +7,8 @@ const app = express();
 
 const urls = [
   'https://raw.githubusercontent.com/fdnd-agency/ultitv/main/api/game/943.json',
-  'https://raw.githubusercontent.com/fdnd-agency/ultitv/main/api/game/943/statistics.json'
+  'https://raw.githubusercontent.com/fdnd-agency/ultitv/main/api/game/943/statistics.json',
+  'https://raw.githubusercontent.com/fdnd-agency/ultitv/main/api/facts/Player/8607.json'
 ];
 
 // Set EJS as the template engine and specify the views directory
@@ -22,8 +23,8 @@ app.use(express.static("public"));
 
 // Create a route for the index page
 app.get('/', async function (request, response) {
-  const [data1, data2] = await Promise.all(urls.map(fetchJson));
-  const data = {data1, data2};
+  const [data1, data2, data3] = await Promise.all(urls.map(fetchJson));
+  const data = {data1, data2, data3};
   response.render('index', data);
 });
 
