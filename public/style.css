@@ -319,7 +319,7 @@ td {
 
 /* User profile cards styling */
 .player-card {
-    background-color: #f2f2f2;
+    background-color: #f2f2f27f;
     border-radius: .5rem;
     margin: .35%;
     flex: 0 1 calc(20% - .7%); /* <-- adjusting for margin */
@@ -378,6 +378,20 @@ td {
     display: none;
     padding: 1rem;
     padding-top: 20vh;
+}
+
+/* Styling player info card */
+.playerInfo-main {
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.QA {
+    background-color: #f2f2f27f;
+}
+
+.inner-player-info-card {
+    padding: .1rem 1rem .1rem 1rem;
 }
 
 /* Styling tablet vertial (in progress) */
