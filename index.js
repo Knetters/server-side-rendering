@@ -29,6 +29,7 @@ app.get('/', async function (request, response) {
   response.render('index', data);
 });
 
+// Create a route for the player info page
 app.get('/playerInfo/:id', (request, response) => {
   let playerId = request.params.id;
   let playerInfoUrl = baseURL + 'facts/Player/' + playerId + '.json';
