@@ -9,7 +9,7 @@ const baseURL = 'https://raw.githubusercontent.com/fdnd-agency/ultitv/main/api/'
 
 const urls = [
   'https://raw.githubusercontent.com/fdnd-agency/ultitv/main/api/game/943.json',
-  'https://raw.githubusercontent.com/fdnd-agency/ultitv/main/api/game/943/statistics.json',
+  'https://raw.githubusercontent.com/fdnd-agency/ultitv/main/api/game/943/statistics.json'
 ];
 
 // Set EJS as the template engine and specify the views directory
@@ -33,7 +33,7 @@ app.get('/playerinfo/:id', (request, response) => {
   let playerId = request.params.id;
   let playerInfoUrl = baseURL + 'facts/Player/' + playerId + '.json';
   fetchJson(playerInfoUrl).then((data) => {
-    response.render('playerinfo', data);
+    response.render('playerinfo', {data: data});
   });
 });
 
