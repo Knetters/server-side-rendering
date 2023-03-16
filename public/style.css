@@ -418,6 +418,10 @@ td {
     .score-panel {
         height: 10rem;
     }
+    
+    .header-panel {
+        height: 8rem;
+    }
 
     .score-flag {
         width: 4rem;
