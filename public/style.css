@@ -325,6 +325,8 @@ td {
     flex: 0 1 calc(20% - .7%); /* <-- adjusting for margin */
     width: calc(20% - .7%);
     transition: .2s;
+    text-decoration: none;
+    color: black;
 }
 
 .player-card:hover {

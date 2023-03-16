@@ -1,0 +1,8 @@
+<% if (Object.keys(data).length === 0) { %>
+    <p>No data available.</p>
+<% } else { %>
+    <% data.forEach(info => { %>
+        <h3 id="title"><%= info.title %></h3>
+        <p id="answer"><%= info.content %></p>
+    <% }) %>
+<% } %>

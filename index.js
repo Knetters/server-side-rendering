@@ -5,6 +5,8 @@ import fetch from "node-fetch";
 // Create a new Express app
 const app = express();
 
+const baseURL = 'https://raw.githubusercontent.com/fdnd-agency/ultitv/main/api/'
+
 const urls = [
   'https://raw.githubusercontent.com/fdnd-agency/ultitv/main/api/game/943.json',
   'https://raw.githubusercontent.com/fdnd-agency/ultitv/main/api/game/943/statistics.json',
@@ -27,6 +29,15 @@ app.get('/', async function (request, response) {
   const data = {data1, data2, data3};
   response.render('index', data);
 });
+
+app.get('/playerinfo/:id', (request, response) => {
+  let playerId = request.params.id;
+  let playerInfoUrl = baseURL + 'facts/Player/' + playerId + '.json';
+  fetchJson(playerInfoUrl).then((data) => {
+    response.render('playerinfo', data);
+  });
+});
+
 
 // Set the port number and start the server
 const port = process.env.PORT || 8000;
