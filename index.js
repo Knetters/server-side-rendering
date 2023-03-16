@@ -29,11 +29,11 @@ app.get('/', async function (request, response) {
   response.render('index', data);
 });
 
-app.get('/playerinfo/:id', (request, response) => {
+app.get('/playerInfo/:id', (request, response) => {
   let playerId = request.params.id;
   let playerInfoUrl = baseURL + 'facts/Player/' + playerId + '.json';
   fetchJson(playerInfoUrl).then((data) => {
-    response.render('playerinfo', {data: data});
+    response.render('playerInfo', {data: data});
   });
 });
 
