@@ -408,8 +408,8 @@ td {
         gap: 1em;
         grid-auto-flow: row;
         grid-template-areas:
-            "header-panel"
             "score-panel"
+            "header-panel"
             "top-team-panel"
             "bot-team-panel"
             "points-panel";
