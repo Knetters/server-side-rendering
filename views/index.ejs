@@ -187,12 +187,21 @@
                         <% data1.team1Players.forEach(player => { %>
 
                             <%# Player card %>
-                                <a href="/playerinfo/<%= player.playerId %>" id="<%= player.playerId %>" class="player-card">
-                                    <div class="inner-card">
-                                        <h4><span class="jersey-number"><%= player.jerseyNumber %></span> <%= player.name %></h4>
-                                        <p><span class="player-tagg green">0</span> <span class="player-tagg blue">0</span> <span class="player-tagg red">0</span> <span class="player-tagg yellow">0</span></p>
-                                    </div>
-                                </a>    
+                                <% if(player.gender === "M") { %>
+                                    <a href="/playerinfo/<%= player.playerId %>" id="<%= player.playerId %>" class="player-card male">
+                                        <div class="inner-card">
+                                            <h4><span class="jersey-number"><%= player.jerseyNumber %></span> <%= player.name %></h4>
+                                            <p><span class="player-tagg green">0</span> <span class="player-tagg blue">0</span> <span class="player-tagg red">0</span> <span class="player-tagg yellow">0</span></p>
+                                        </div>
+                                    </a>
+                                <% } if(player.gender === "F") { %>
+                                    <a href="/playerinfo/<%= player.playerId %>" id="<%= player.playerId %>" class="player-card female">
+                                        <div class="inner-card">
+                                            <h4><span class="jersey-number"><%= player.jerseyNumber %></span> <%= player.name %></h4>
+                                            <p><span class="player-tagg green">0</span> <span class="player-tagg blue">0</span> <span class="player-tagg red">0</span> <span class="player-tagg yellow">0</span></p>
+                                        </div>
+                                    </a>
+                                <% } %>
                         <% }) %>
                     </div>
                 </div>
@@ -204,12 +213,21 @@
                         <% data1.team2Players.forEach(player => { %>
 
                             <%# Player card %>
-                                <a href="/playerinfo/<%= player.playerId %>" id="<%= player.playerId %>" class="player-card">
+                            <% if(player.gender === "M") { %>
+                                <a href="/playerinfo/<%= player.playerId %>" id="<%= player.playerId %>" class="player-card male">
                                     <div class="inner-card">
                                         <h4><span class="jersey-number"><%= player.jerseyNumber %></span> <%= player.name %></h4>
                                         <p><span class="player-tagg green">0</span> <span class="player-tagg blue">0</span> <span class="player-tagg red">0</span> <span class="player-tagg yellow">0</span></p>
                                     </div>
                                 </a>
+                            <% } if(player.gender === "F") { %>
+                                <a href="/playerinfo/<%= player.playerId %>" id="<%= player.playerId %>" class="player-card female">
+                                    <div class="inner-card">
+                                        <h4><span class="jersey-number"><%= player.jerseyNumber %></span> <%= player.name %></h4>
+                                        <p><span class="player-tagg green">0</span> <span class="player-tagg blue">0</span> <span class="player-tagg red">0</span> <span class="player-tagg yellow">0</span></p>
+                                    </div>
+                                </a>
+                            <% } %>
                         <% }) %>
                         
                     </div>
