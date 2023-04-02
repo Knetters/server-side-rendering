@@ -16,7 +16,7 @@
     "express",
     "ejs"
   ],
-  "author": "J.P. Sturkenboom <j.p.sturkenboom@hva.nl>",
+  "author": "T.J.B.Scheepers <thomas@scheepers.com>",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/fdnd-task/server-side-rendering/issues"
